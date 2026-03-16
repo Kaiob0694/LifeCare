@@ -1,5 +1,6 @@
 import cv2
 import time
+import winsound
 from ultralytics import YOLO
 
 # carregar modelo
@@ -47,7 +48,7 @@ while True:
 
                     fall_duration = time.time() - fall_start_time
 
-                    if fall_duration > 3:
+                    if fall_duration > 2:
                         fall_detected = True
 
                 else:
@@ -64,6 +65,9 @@ while True:
             (0,0,255),
             3
         )
+        winsound.Beep(1500, 500)
+        winsound.Beep(800, 500)
+        winsound.Beep(1500, 500)
 
     cv2.imshow("LifeCare Fall Detector", frame)
 
