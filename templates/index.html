@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Horus EPI</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <h1>📊 Dashboard - Horus Detector de EPI</h1>
+    </header>
+
+    <main>
+        <section class="galeria">
+            <h2>Fotos Registradas</h2>
+            <div class="grid">
+                {% for img in imagens %}
+                <div class="card">
+                    <img src="{{ img.caminho }}" alt="Foto alerta">
+                    <div class="info">
+                        <p><strong>Data:</strong> {{ img.data }}</p>
+                        <p><strong>Hora:</strong> {{ img.hora }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Protótipo de monitoramento de segurança - Horus</p>
+    </footer>
+</body>
+</html>
