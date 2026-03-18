@@ -6,7 +6,8 @@ from ultralytics import YOLO
 # garante que a pasta existe
 os.makedirs("fotos", exist_ok=True)
 
-model = YOLO("yolov8n.pt")  # ou seu modelo treinado
+model = YOLO(r"runs\detect\train3\weights\best.pt")  # ou seu modelo treinado
+model_pessoa = YOLO("yolov8n.pt")
 cap = cv2.VideoCapture(0)
 
 estado_alerta = True
