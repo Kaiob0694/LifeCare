@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['Cap', 'Hat', 'cap', 'hat', 'head', 'helmet']
+
+roboflow:
+  workspace: kaios-workspace
+  project: caps-gi4un-b1isn
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kaios-workspace/caps-gi4un-b1isn/dataset/1
